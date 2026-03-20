@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAM PRODUCTS — Taste Bhi, Health Bhi | Premium Desi Ghee Roasted Makhana & Fresh Atta</title>
+    <meta name="description" content="YAM PRODUCTS - India's healthiest snack brand. Premium Desi Ghee Roasted Makhana in 4 bold flavours & Fresh Sharbati Chaki Atta. No oil, no preservatives. Order on WhatsApp!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #FAFAF7;
+            color: #1A1A1A;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* ===== COLORS ===== */
+        :root {
+            --saffron: #D85A30;
+            --saffron-dark: #B84A25;
+            --charcoal: #1A1A1A;
+            --gold: #D4A017;
+            --offwhite: #FAFAF7;
+            --light-saffron: #FFF4EE;
+            --gray-text: #555;
+            --card-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            --card-shadow-hover: 0 8px 40px rgba(0,0,0,0.14);
+        }
+
+        /* ===== UTILITY ===== */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+        .section-title {
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 12px;
+        }
+        .section-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.15rem);
+            color: var(--gray-text);
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+        .text-center { text-align: center; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 14px 32px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        .btn-primary {
+            background: var(--saffron);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(216,90,48,0.35);
+        }
+        .btn-primary:hover {
+            background: var(--saffron-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 28px rgba(216,90,48,0.45);
+        }
+        .btn-ghost {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+        .btn-ghost:hover {
+            border-color: #fff;
+            background: rgba(255,255,255,0.08);
+        }
+        .btn-gold {
+            background: var(--gold);
+            color: var(--charcoal);
+            box-shadow: 0 4px 20px rgba(212,160,23,0.3);
+        }
+        .btn-gold:hover {
+            background: #c29515;
+            transform: translateY(-2px);
+        }
+        .btn-white {
+            background: #fff;
+            color: var(--saffron);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+        }
+        .btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+        /* WhatsApp icon inline SVG helper */
+        .wa-icon { fill: currentColor; }
+
+        /* ===== STICKY HEADER ===== */
+        .header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(26,26,26,0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212,160,23,0.15);
+            transition: box-shadow 0.3s;
+        }
+        .header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .header-brand-name {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+        .header-brand-name span { color: var(--gold); }
+        .header-tagline {
+            display: none;
+            font-size: 0.7rem;
+            color: var(--gold);
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        .header-nav { display: flex; align-items: center; gap: 24px; }
+        .header-nav a {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: #fff; }
+        .header-cta {
+            background: var(--saffron);
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.3s;
+        }
+        .header-cta:hover { background: var(--saffron-dark); transform: translateY(-1px); }
+        .header-cta svg { width: 16px; height: 16px; }
+        .nav-links { display: none; }
+
+        @media (min-width: 768px) {
+            .header-tagline { display: block; }
+            .nav-links { display: flex; gap: 24px; }
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--charcoal);
+            overflow: hidden;
+            padding-top: 70px;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 80%, rgba(216,90,48,0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(212,160,23,0.1) 0%, transparent 50%);
+        }
+        /* Subtle organic shapes */
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -30%; right: -10%;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(216,90,48,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+            padding: 60px 20px 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .hero-content { text-align: center; }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(212,160,23,0.15);
+            color: var(--gold);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 6px 18px;
+            border-radius: 50px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border: 1px solid rgba(212,160,23,0.25);
+        }
+        .hero-title {
+            font-size: clamp(2rem, 7vw, 3.8rem);
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        .hero-title .highlight { color: var(--saffron); }
+        .hero-title .gold { color: var(--gold); }
+        .hero-sub {
+            font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 36px;
+            line-height: 1.7;
+            max-width: 540px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-sub strong { color: rgba(255,255,255,0.95); font-weight: 600; }
+        .hero-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-image img {
+            max-height: 420px;
+            width: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            object-fit: cover;
+        }
+
+        @media (min-width: 768px) {
+            .hero-inner { grid-template-columns: 1fr 1fr; text-align: left; padding: 80px 20px 100px; }
+            .hero-content { text-align: left; }
+            .hero-sub { margin-left: 0; }
+            .hero-buttons { justify-content: flex-start; }
+            .hero-image img { max-height: 500px; }
+        }
+
+        /* ===== TRUST BAR ===== */
+        .trust-bar {
+            background: linear-gradient(135deg, var(--charcoal) 0%, #2a2a2a 100%);
+            padding: 0;
+            position: relative;
+            z-index: 3;
+        }
+        .trust-bar-inner {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .trust-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 32px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            border-right: 1px solid rgba(255,255,255,0.06);
+            text-align: center;
+        }
+        .trust-item:nth-child(2n) { border-right: none; }
+        .trust-icon {
+            width: 48px; height: 48px;
+            background: rgba(212,160,23,0.12);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .trust-icon svg { width: 26px; height: 26px; fill: var(--gold); }
+        .trust-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.3;
+        }
+
+        @media (min-width: 768px) {
+            .trust-bar-inner { grid-template-columns: repeat(4, 1fr); }
+            .trust-item { border-bottom: none; padding: 40px 20px; flex-direction: row; gap: 14px; }
+            .trust-item:nth-child(2n) { border-right: 1px solid rgba(255,255,255,0.06); }
+            .trust-item:last-child { border-right: none; }
+        }
+
+        /* ===== MAKHANA PRODUCTS ===== */
+        .products { padding: 80px 0 90px; }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .product-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: all 0.35s ease;
+            position: relative;
+        }
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--card-shadow-hover);
+        }
+        .product-card-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .product-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .product-card:hover .product-card-image img { transform: scale(1.05); }
+        .flavour-tag {
+            position: absolute;
+            top: 12px; left: 12px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 50px;
+            color: #fff;
+        }
+        .flavour-tag.peri { background: #E04040; }
+        .flavour-tag.cheese { background: #E89B20; }
+        .flavour-tag.masala { background: #8B5E3C; }
+        .flavour-tag.namak { background: #7B8F6A; }
+        .product-card-body { padding: 20px; }
+        .product-card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .product-card-desc {
+            font-size: 0.85rem;
+            color: var(--gray-text);
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+        .product-card .btn {
+            width: 100%;
+            justify-content: center;
+            padding: 11px 20px;
+            font-size: 0.85rem;
+        }
+
+        @media (min-width: 768px) {
+            .products-grid { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+            .product-card-image { height: 260px; }
+        }
+
+        /* ===== HEALTH BENEFITS ===== */
+        .benefits {
+            background: var(--light-saffron);
+            padding: 80px 0 90px;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .benefit-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+        }
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+        .benefit-icon {
+            width: 50px; height: 50px;
+            background: linear-gradient(135deg, var(--saffron), #E8784A);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+        .benefit-icon svg { width: 26px; height: 26px; fill: #fff; }
+        .benefit-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .benefit-desc {
+            font-size: 0.85rem;
+            color: var(--gray-text);
+            line-height: 1.5;
+        }
+
+        @media (min-width: 768px) {
+            .benefits-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        }
+
+        /* ===== ATTA SECTION ===== */
+        .atta { padding: 80px 0 90px; }
+        .atta-card {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0;
+            background: #fff;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+        }
+        .atta-card-image {
+            height: 300px;
+            overflow: hidden;
+        }
+        .atta-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .atta-card-body {
+            padding: 36px 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .atta-card-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .atta-card-desc {
+            font-size: 0.95rem;
+            color: var(--gray-text);
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+        .atta-varieties {
+            margin-top: 32px;
+        }
+        .atta-varieties-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gray-text);
+            margin-bottom: 14px;
+        }
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .pill {
+            background: var(--light-saffron);
+            color: var(--saffron);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 50px;
+            border: 1px solid rgba(216,90,48,0.15);
+            transition: all 0.2s;
+        }
+        .pill:hover {
+            background: var(--saffron);
+            color: #fff;
+        }
+
+        @media (min-width: 768px) {
+            .atta-card { grid-template-columns: 1fr 1fr; }
+            .atta-card-image { height: auto; min-height: 400px; }
+        }
+
+        /* ===== SOCIAL PROOF / BRAND PROMISE ===== */
+        .brand-promise {
+            background: var(--charcoal);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .brand-promise::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(212,160,23,0.06) 0%, transparent 70%);
+        }
+        .brand-promise-inner {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .brand-promise .quote-mark {
+            font-size: 4rem;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 10px;
+            opacity: 0.5;
+        }
+        .brand-promise-quote {
+            font-size: clamp(1.3rem, 4vw, 2rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.4;
+            margin-bottom: 16px;
+        }
+        .brand-promise-sub {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 30px;
+        }
+        .brand-promise-brand {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--gold);
+            letter-spacing: 3px;
+        }
+
+        /* Customer reviews image */
+        .reviews-strip {
+            margin-top: 50px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .reviews-strip img {
+            border-radius: 10px;
+            width: 100%;
+        }
+        .reviews-strip-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 14px;
+        }
+
+        /* ===== CONTACT / ORDER ===== */
+        .contact {
+            padding: 80px 0 90px;
+            background: var(--light-saffron);
+        }
+        .contact-box {
+            background: #fff;
+            border-radius: 24px;
+            padding: 48px 32px;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: var(--card-shadow);
+        }
+        .contact-icon {
+            width: 70px; height: 70px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+        .contact-icon svg { width: 36px; height: 36px; fill: #fff; }
+        .contact-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .contact-desc {
+            font-size: 1rem;
+            color: var(--gray-text);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 16px 36px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+        }
+        .contact-btn:hover {
+            background: #1EB954;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 28px rgba(37,211,102,0.45);
+        }
+        .contact-btn svg { width: 24px; height: 24px; fill: #fff; }
+        .contact-note {
+            margin-top: 18px;
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--charcoal);
+            padding: 40px 0;
+            text-align: center;
+        }
+        .footer-brand {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 2px;
+            margin-bottom: 4px;
+        }
+        .footer-brand span { color: var(--gold); }
+        .footer-tagline {
+            font-size: 0.85rem;
+            color: var(--gold);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+        .footer-phone {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 16px;
+        }
+        .footer-phone a { color: rgba(255,255,255,0.7); }
+        .footer-phone a:hover { color: #fff; }
+        .footer-copy {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.3);
+        }
+        .footer-fssai {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.4);
+            margin-top: 8px;
+        }
+
+        /* ===== FLOATING WHATSAPP BUTTON ===== */
+        .wa-float {
+            position: fixed;
+            bottom: 24px; right: 24px;
+            z-index: 999;
+            width: 60px; height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+            transition: all 0.3s;
+            animation: pulse-wa 2s infinite;
+        }
+        .wa-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 28px rgba(37,211,102,0.55);
+        }
+        .wa-float svg { width: 32px; height: 32px; fill: #fff; }
+
+        @keyframes pulse-wa {
+            0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.45); }
+            50% { box-shadow: 0 4px 30px rgba(37,211,102,0.65), 0 0 0 10px rgba(37,211,102,0.1); }
+        }
+
+        /* ===== FSSAI BADGE ===== */
+        .fssai-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.5);
+            font-weight: 500;
+            margin-top: 20px;
+        }
+        .fssai-badge strong { color: rgba(255,255,255,0.7); }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE FIXES ===== */
+        @media (max-width: 480px) {
+            .hero-title { font-size: 1.85rem; }
+            .hero-buttons .btn { width: 100%; justify-content: center; }
+            .product-card-body { padding: 14px; }
+            .product-card-title { font-size: 0.95rem; }
+            .product-card-desc { font-size: 0.8rem; margin-bottom: 12px; }
+            .product-card .btn { padding: 9px 14px; font-size: 0.8rem; }
+            .benefit-card { padding: 22px 18px; }
+            .contact-box { padding: 36px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== STICKY HEADER ===== -->
+<header class="header" id="header">
+    <div class="header-inner">
+        <div class="header-brand">
+            <div>
+                <div class="header-brand-name">YAM <span>PRODUCTS</span></div>
+                <div class="header-tagline">Taste Bhi, Health Bhi</div>
+            </div>
+        </div>
+        <nav class="header-nav">
+            <div class="nav-links">
+                <a href="#products">Makhana</a>
+                <a href="#atta">Atta</a>
+                <a href="#benefits">Benefits</a>
+                <a href="#contact">Order</a>
+            </div>
+            <a href="https://wa.me/919727439072" target="_blank" rel="noopener" class="header-cta">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Order Now
+            </a>
+        </nav>
+    </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+    <div class="hero-inner">
+        <div class="hero-content">
+            <div class="hero-badge">FSSAI Licensed</div>
+            <h1 class="hero-title">
+                India Ka <span class="highlight">Healthiest</span> Snack — <span class="gold">YAM PRODUCTS</span>
+            </h1>
+            <p class="hero-sub">
+                <strong>Desi Ghee Roasted Makhana</strong> | No Oil | No Preservatives | <strong>4 Delicious Flavours</strong>
+            </p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/919727439072" target="_blank" rel="noopener" class="btn btn-primary">
+                    <svg viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Order on WhatsApp
+                </a>
+                <a href="#products" class="btn btn-ghost">Explore Products</a>
+            </div>
+            <div class="fssai-badge">
+                <strong>FSSAI:</strong> 20726038000338
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/all-flavours.jpeg" alt="YAM PRODUCTS - Premium Desi Ghee Roasted Makhana in Cheese, Magic Masala & Peri Peri Flavours" loading="eager">
+        </div>
+    </div>
+</section>
+
+<!-- ===== TRUST BAR ===== -->
+<section class="trust-bar">
+    <div class="trust-bar-inner">
+        <div class="trust-item">
+            <div class="trust-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <span class="trust-label">100% Desi Ghee Roasted</span>
+        </div>
+        <div class="trust-item">
+            <div class="trust-icon">
+                <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+            </div>
+            <span class="trust-label">Zero Oil</span>
+        </div>
+        <div class="trust-item">
+            <div class="trust-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            </div>
+            <span class="trust-label">No Preservatives</span>
+        </div>
+        <div class="trust-item">
+            <div class="trust-icon">
+                <svg viewBox="0 0 24 24"><path d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"/></svg>
+            </div>
+            <span class="trust-label">High Protein</span>
+        </div>
+    </div>
+</section>
+
+<!-- ===== MAKHANA PRODUCTS ===== -->
+<section class="products" id="products">
+    <div class="container">
+        <div class="text-center">
+            <span class="section-label">Our Bestsellers</span>
+            <h2 class="section-title">Premium Roasted Makhana</h2>
+            <p class="section-subtitle mx-auto">Guilt-free snacking in 4 bold flavours — roasted in pure desi ghee, zero oil, zero compromise.</p>
+        </div>
+        <div class="products-grid">
+            <!-- Peri Peri -->
+            <div class="product-card fade-up">
+                <div class="product-card-image" style="background: #FFF0ED;">
+                    <span class="flavour-tag peri">Peri Peri</span>
+                    <img src="images/peri-peri-makhana.jpeg" alt="Peri Peri Desi Ghee Roasted Makhana by YAM PRODUCTS" loading="lazy">
+                </div>
+                <div class="product-card-body">
+                    <h3 class="product-card-title">Peri Peri</h3>
+                    <p class="product-card-desc">Spicy, tangy, bold kick</p>
+                    <a href="https://wa.me/919727439072?text=Hi!%20I%20want%20to%20order%20Peri%20Peri%20Makhana" target="_blank" rel="noopener" class="btn btn-primary">
+                        <svg viewBox="0 0 24 24" style="width:16px;height:16px"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Order Now
+                    </a>
+                </div>
+            </div>
+            <!-- Cheese -->
+            <div class="product-card fade-up">
+                <div class="product-card-image" style="background: #FFF8ED;">
+                    <span class="flavour-tag cheese">Cheese</span>
+                    <img src="images/cheese-makhana.jpeg" alt="Cheese Desi Ghee Roasted Makhana by YAM PRODUCTS" loading="lazy">
+                </div>
+                <div class="product-card-body">
+                    <h3 class="product-card-title">Cheese</h3>
+                    <p class="product-card-desc">Rich, creamy, irresistible</p>
+                    <a href="https://wa.me/919727439072?text=Hi!%20I%20want%20to%20order%20Cheese%20Makhana" target="_blank" rel="noopener" class="btn btn-primary">
+                        <svg viewBox="0 0 24 24" style="width:16px;height:16px"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Order Now
+                    </a>
+                </div>
+            </div>
+            <!-- Magic Masala -->
+            <div class="product-card fade-up">
+                <div class="product-card-image" style="background: #F7F0E8;">
+                    <span class="flavour-tag masala">Magic Masala</span>
+                    <img src="images/magic-masala-makhana.jpeg" alt="Magic Masala Desi Ghee Roasted Makhana by YAM PRODUCTS" loading="lazy">
+                </div>
+                <div class="product-card-body">
+                    <h3 class="product-card-title">Magic Masala</h3>
+                    <p class="product-card-desc">Classic desi masala magic</p>
+                    <a href="https://wa.me/919727439072?text=Hi!%20I%20want%20to%20order%20Magic%20Masala%20Makhana" target="_blank" rel="noopener" class="btn btn-primary">
+                        <svg viewBox="0 0 24 24" style="width:16px;height:16px"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Order Now
+                    </a>
+                </div>
+            </div>
+            <!-- Namak Roasted -->
+            <div class="product-card fade-up">
+                <div class="product-card-image" style="background: #F2F5EF;">
+                    <span class="flavour-tag namak">Classic</span>
+                    <img src="images/makhana-hero.jpeg" alt="Namak Roasted Desi Ghee Makhana by YAM PRODUCTS" loading="lazy">
+                </div>
+                <div class="product-card-body">
+                    <h3 class="product-card-title">Namak Roasted</h3>
+                    <p class="product-card-desc">Pure, light, traditional taste</p>
+                    <a href="https://wa.me/919727439072?text=Hi!%20I%20want%20to%20order%20Namak%20Roasted%20Makhana" target="_blank" rel="noopener" class="btn btn-primary">
+                        <svg viewBox="0 0 24 24" style="width:16px;height:16px"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Order Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== HEALTH BENEFITS ===== -->
+<section class="benefits" id="benefits">
+    <div class="container">
+        <div class="text-center">
+            <span class="section-label">Health Benefits</span>
+            <h2 class="section-title">Why Makhana is Your New Best Friend</h2>
+            <p class="section-subtitle mx-auto">Packed with nutrients, low in calories — the perfect snack for a healthier you.</p>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card fade-up">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                </div>
+                <h3 class="benefit-title">Appetite Control</h3>
+                <p class="benefit-desc">Keeps you full longer, reducing unhealthy cravings throughout the day.</p>
+            </div>
+            <div class="benefit-card fade-up">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+                </div>
+                <h3 class="benefit-title">Blood Sugar Balance</h3>
+                <p class="benefit-desc">Low glycemic index helps maintain stable blood sugar levels naturally.</p>
+            </div>
+            <div class="benefit-card fade-up">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+                <h3 class="benefit-title">Promotes Heart Health</h3>
+                <p class="benefit-desc">Rich in magnesium and potassium, supporting healthy cardiovascular function.</p>
+            </div>
+            <div class="benefit-card fade-up">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+                </div>
+                <h3 class="benefit-title">Strengthens Bones</h3>
+                <p class="benefit-desc">Excellent source of calcium — great for bone health at every age.</p>
+            </div>
+            <div class="benefit-card fade-up">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24"><path d="M8.1 13.34l2.83-2.83L3.91 3.5a4.008 4.008 0 000 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L13.41 13l1.47-1.47z"/></svg>
+                </div>
+                <h3 class="benefit-title">Improves Digestion</h3>
+                <p class="benefit-desc">High fibre content promotes gut health and smooth digestion.</p>
+            </div>
+            <div class="benefit-card fade-up">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"/></svg>
+                </div>
+                <h3 class="benefit-title">High in Protein</h3>
+                <p class="benefit-desc">A natural protein-rich snack, perfect for fitness enthusiasts and growing kids.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ATTA SECTION ===== -->
+<section class="atta" id="atta">
+    <div class="container">
+        <div class="text-center">
+            <span class="section-label">Also From YAM</span>
+            <h2 class="section-title">Fresh Sharbati Chaki Atta & More</h2>
+            <p class="section-subtitle mx-auto">M.P. Fresh | No Preservatives | Order Custom Varieties</p>
+        </div>
+        <div class="atta-card fade-up">
+            <div class="atta-card-image">
+                <img src="images/sharbati-atta-graphic.jpeg" alt="YAM PRODUCTS Sharbati Atta - MP Fresh 5kg" loading="lazy">
+            </div>
+            <div class="atta-card-body">
+                <h3 class="atta-card-title">MP Fresh Sharbati Chaki Atta</h3>
+                <p class="atta-card-desc">Stone-ground from premium Madhya Pradesh Sharbati wheat. Fresh, pure, and free from preservatives — the way atta was meant to be. Makes soft, fluffy rotis every single time.</p>
+                <a href="https://wa.me/919727439072?text=Hi!%20I%20want%20to%20order%20Sharbati%20Atta" target="_blank" rel="noopener" class="btn btn-primary" style="align-self:flex-start;">
+                    <svg viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Order on WhatsApp
+                </a>
+                <div class="atta-varieties">
+                    <p class="atta-varieties-title">Also Available on Order</p>
+                    <div class="pill-row">
+                        <span class="pill">Barley Atta</span>
+                        <span class="pill">Ragi Atta</span>
+                        <span class="pill">Bajri Atta</span>
+                        <span class="pill">High Protein Chana Atta</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SOCIAL PROOF / BRAND PROMISE ===== -->
+<section class="brand-promise">
+    <div class="container">
+        <div class="brand-promise-inner">
+            <div class="quote-mark">"</div>
+            <p class="brand-promise-quote">We don't just sell food. We sell taste, trust, and health.</p>
+            <p class="brand-promise-sub">Every product made with care — no shortcuts, no compromise.</p>
+            <div class="brand-promise-brand">YAM PRODUCTS</div>
+
+            <!-- Customer Reviews -->
+            <div class="reviews-strip fade-up">
+                <p class="reviews-strip-label">What Our Customers Say</p>
+                <img src="images/customer-reviews.jpeg" alt="Customer reviews and testimonials for YAM PRODUCTS" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT / ORDER ===== -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact-box fade-up">
+            <div class="contact-icon">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <h2 class="contact-title">Ready to Order?</h2>
+            <p class="contact-desc">Send us a WhatsApp message for pricing, bulk orders, and delivery details. We're just one tap away!</p>
+            <a href="https://wa.me/919727439072" target="_blank" rel="noopener" class="contact-btn">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Chat on WhatsApp — +91 9727439072
+            </a>
+            <p class="contact-note">We reply fast! Mon–Sat, 9am–9pm</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-brand">YAM <span>PRODUCTS</span></div>
+        <div class="footer-tagline">Taste Bhi, Health Bhi</div>
+        <div class="footer-phone">
+            WhatsApp: <a href="https://wa.me/919727439072">+91 9727439072</a>
+        </div>
+        <div class="footer-fssai">FSSAI License: 20726038000338 &nbsp;|&nbsp; 20726038003338</div>
+        <div class="footer-copy">&copy; 2026 YAM PRODUCTS. All rights reserved.</div>
+    </div>
+</footer>
+
+<!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+<a href="https://wa.me/919727439072" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ===== MINIMAL JS ===== -->
+<script>
+// Sticky header shadow on scroll
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+
+// Intersection Observer for fade-up animations
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const headerHeight = header.offsetHeight;
+            const top = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+            window.scrollTo({ top, behavior: 'smooth' });
+        }
+    });
+});
+</script>
+
+</body>
+</html>
